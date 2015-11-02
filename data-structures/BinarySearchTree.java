@@ -17,8 +17,30 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public BinarySearchTree() {
     }
 
+    public int depth() {
+        return depth(root);
+    }
+
+    private int depth(Node<T> node) {
+        if (node == null)
+            return 0;
+        return Math.max(depth(node.left), depth(node.right))+1;
+    }
+
+    public int leaves() {
+        return leaves(root);
+    }
+
+    private int leaves(Node<T> node) {
+        if (size <= 1) return size;
+        if (node == null) return 0;
+        if (node.left == null && node.right == null) return 1;
+        return leaves(node.left) + leaves(node.right);
+    }
+
     public void insert(T data) {
         if (root == null) {
+            ++size;
             root = new Node<T>(data, null, null);
             return;
         }
@@ -26,10 +48,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     private void insert(T data, Node<T> node) {
-        if (node == null) {
-            node = new Node<T>(data, null, null);
-            return;
-        }
         int compare = data.compareTo(node.data);
         if (compare == 0)
             return;
@@ -79,5 +97,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         bst.insert(6);
         System.out.println(bst.size());
         System.out.println(bst);
+        System.out.println("Depth is: " + bst.depth());
+        System.out.println("Number of leaves: " + bst.leaves());
     }
 }
