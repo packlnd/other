@@ -4,10 +4,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         private Node<T> left;
         private Node<T> right;
 
-        private Node(T data, Node<T> left, Node<T> right) {
+        private Node(T data) {
             this.data = data;
-            this.left = left;
-            this.right = right;
+            this.left = null;
+            this.right = null;
         }
     }
 
@@ -17,13 +17,18 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public BinarySearchTree() {
     }
 
-    public BinarySearchTree(T[] array) {
-        int low=0;
-        int high=array.length;
-        while (low < high) {
-            int mid = low + (high-low)/2;
-            //TODO Insert recursivly with new insert.
-        }
+    public BinarySearchTree(T[] V) {
+        root = insert(V, 0, V.length);
+    }
+
+    private Node<T> insert(T[] V, int low, int high) {
+        if (low >= high)
+            return null;
+        int mid = low+(high-low)/2;
+        Node<T> n = new Node<T>(V[mid]);
+        n.left = insert(V, low, mid);
+        n.right = insert(V, mid+1, high);
+        return n;
     }
 
     public int depth() {
@@ -64,7 +69,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public void insert(T data) {
         if (root == null) {
             ++size;
-            root = new Node<T>(data, null, null);
+            root = new Node<T>(data);
             return;
         }
         insert(data, root);
@@ -76,14 +81,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return;
         if (compare < 0) {
             if (node.left == null) {
-                node.left = new Node<T>(data, null, null);
+                node.left = new Node<T>(data);
                 ++size;
                 return;
             }
             insert(data, node.left);
         } else {
             if (node.right == null) {
-                node.right = new Node<T>(data,null,null);
+                node.right = new Node<T>(data);
                 ++size;
                 return;
             }
@@ -153,6 +158,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
         assert bst.leaves() == 2;
         assert bst.contains(5);
         assert !bst.contains(3);
+        BinarySearchTree<Integer> bst2 =
+            new BinarySearchTree<Integer>(new Integer[]{1,2,3,4,5,6,7});
+        assert bst2.toString().equals("(4(2(1)(3))(6(5)(7)))");
+        assert bst2.depth() == 3;
+        System.out.println(bst2.leaves());
+        assert bst2.leaves() == 4;
+        assert bst2.size() == 7;
         System.out.println("OK");
     }
 }
