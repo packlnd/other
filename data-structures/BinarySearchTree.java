@@ -38,6 +38,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return leaves(node.left) + leaves(node.right);
     }
 
+    public void flip() {
+        flip(root);
+    }
+
+    private void flip(Node<T> node) {
+        if (node == null)
+            return;
+        flip(node.left);
+        flip(node.right);
+        Node<T> tmp = node.left;
+        node.left = node.right;
+        node.right = tmp;
+    }
+
     public void insert(T data) {
         if (root == null) {
             ++size;
@@ -84,9 +98,28 @@ public class BinarySearchTree<T extends Comparable<T>> {
         sb.append("(");
         sb.append(node.data);
         toString(sb, node.left);
-        sb.append(",");
         toString(sb, node.right);
         sb.append(")");
+    }
+
+    public boolean contains(T value) {
+        return contains(root, value);
+    }
+
+    private boolean contains(Node<T> node, T value) {
+        if (node == null)
+            return false;
+        if (node.data == value)
+            return true;
+        if (contains(node.left, value))
+            return true;
+        if (contains(node.right, value))
+            return true;
+        return false;
+    }
+
+    public void insert(T[] list) {
+        //TODO: Tomorrow
     }
 
     public static void main(String[] args) {
@@ -95,9 +128,26 @@ public class BinarySearchTree<T extends Comparable<T>> {
         bst.insert(2);
         bst.insert(8);
         bst.insert(6);
-        System.out.println(bst.size());
-        System.out.println(bst);
-        System.out.println("Depth is: " + bst.depth());
-        System.out.println("Number of leaves: " + bst.leaves());
+        /*
+         *   5
+         *  / \
+         * 2   8
+         *    /
+         *   6
+         */
+        assert bst.size() == 4;
+        assert bst.toString().equals("(5(2)(8(6)))");
+        assert bst.depth() == 3;
+        assert bst.leaves() == 2;
+        assert bst.contains(5);
+        assert !bst.contains(3);
+        bst.flip();
+        assert bst.size() == 4;
+        assert bst.toString().equals("(5(8(6))(2))");
+        assert bst.depth() == 3;
+        assert bst.leaves() == 2;
+        assert bst.contains(5);
+        assert !bst.contains(3);
+        System.out.println("OK");
     }
 }
