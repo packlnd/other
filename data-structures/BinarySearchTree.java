@@ -17,6 +17,15 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public BinarySearchTree() {
     }
 
+    public BinarySearchTree(T[] array) {
+        int low=0;
+        int high=array.length;
+        while (low < high) {
+            int mid = low + (high-low)/2;
+            //TODO Insert recursivly with new insert.
+        }
+    }
+
     public int depth() {
         return depth(root);
     }
@@ -116,10 +125,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if (contains(node.right, value))
             return true;
         return false;
-    }
-
-    public void insert(T[] list) {
-        //TODO: Tomorrow
     }
 
     public static void main(String[] args) {
