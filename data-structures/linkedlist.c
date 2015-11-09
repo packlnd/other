@@ -25,9 +25,16 @@ int main() {
     Node *ll;
     ll = (Node *)malloc(sizeof(Node));
     ll->data = 1;
+    ll->next = NULL;
     print(ll);
     ll = insert(ll, 3);
     print(ll);
-    //TODO: Memory
+
+    Node *n = ll;
+    while (n != 0) {
+        Node *tmp = n;
+        n = n->next;
+        free(tmp);
+    }
     return 0;
 }
