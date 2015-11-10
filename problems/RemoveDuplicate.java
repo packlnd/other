@@ -27,11 +27,8 @@ public class RemoveDuplicate {
                 ++size;
                 return;
             }
-            Node tmp = first;
-            while (tmp.next != null)
-                tmp = tmp.next;
-            tmp.next = n;
-            ++size;
+            n.next = first;
+            first = n;
         }
 
         public String toString() {
@@ -50,8 +47,8 @@ public class RemoveDuplicate {
             HashSet<Integer> set = new HashSet<Integer>();
             if (first == null) return;
             set.add(first.data);
-            Node tmp = first;
-            while (tmp != null) {
+            for (Node tmp = first; tmp.next != null; tmp = tmp.next) {
+                System.out.println("Data is: " + tmp.next.data);
                 if (set.contains(tmp.next.data))
                     tmp.next = tmp.next.next;
                 tmp = tmp.next;
@@ -66,9 +63,9 @@ public class RemoveDuplicate {
         ll.add(2);
         ll.add(3);
         ll.add(1);
-        assert ll.toString().equals("[1, 2, 3, 1]");
+        assert ll.toString().equals("[1, 3, 2, 1]");
         ll.removeDuplicates();
-        assert ll.toString().equals("[1, 2, 3]");
+        assert ll.toString().equals("[1, 3, 2]");
         System.out.println("OK");
     }
 }
