@@ -12,29 +12,30 @@ void print(Node *ll) {
     printf("_\n");
 }
 
-Node *insert(Node *ll, int val) {
+void insert(Node **ll, int val) {
     Node *n;
     n = (Node *)malloc(sizeof(Node));
     n->data = val;
-    n->next = ll;
-    ll = n;
-    return ll;
+    n->next = *ll;
+    *ll = n;
 }
 
-int main() {
-    Node *ll;
-    ll = (Node *)malloc(sizeof(Node));
-    ll->data = 1;
-    ll->next = NULL;
-    print(ll);
-    ll = insert(ll, 3);
-    print(ll);
-
+void free_list(Node *ll) {
     Node *n = ll;
     while (n != 0) {
         Node *tmp = n;
         n = n->next;
         free(tmp);
     }
+}
+
+int main() {
+    Node *ll = NULL;
+    insert(&ll, 1);
+    print(ll);
+    insert(&ll, 3);
+    print(ll);
+
+    free_list(ll);
     return 0;
 }
