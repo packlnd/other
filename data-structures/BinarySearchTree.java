@@ -101,6 +101,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return size;
     }
 
+    public boolean isBalanced() {
+        return isBalanced(root);
+    }
+
+    private boolean isBalanced(Node<T> node) {
+        return node == null ||
+            (isBalanced(node.left) && isBalanced(node.right) &&
+            Math.abs(depth(node.left)-depth(node.right)) <= 1);
+    }
+
     public String toString() {
         StringBuilder sb = new StringBuilder();
         toString(sb, root);
@@ -184,6 +194,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
         assert bst2.size() == 7;
         assert bst2.getMax() == 7;
         assert bst2.getMin() == 1;
+        assert bst2.isBalanced();
+        BinarySearchTree<Integer> bst3 = new BinarySearchTree<Integer>();
+        bst3.insert(8);
+        bst3.insert(6);
+        bst3.insert(2);
+        assert !bst3.isBalanced();
         System.out.println("OK");
     }
 }
