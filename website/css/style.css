@@ -1,0 +1,47 @@
+ul.experience {
+    height: auto;
+    list-style-type:none;
+}
+
+ul.tasks {
+    list-style-type:none;
+    clear:both;
+    float:left;
+}
+
+li.exp-item {
+    width:45%;
+    text-align:left;
+    overflow:hidden;
+    padding-top:auto;
+    padding-bottom:auto;
+}
+
+.icon {
+    float:left;
+}
+
+.description {
+    display:block;
+    width:75%;
+    height:150px;
+    float:right;
+}
+
+.jobtitle {
+    float:left;
+    margin-right:35px;
+}
+
+.date {
+    float:right;
+}
+
+.icon img {
+    height:150px;
+    width:150px;
+}
+
+body {
+    background-color:#ECECEC;
+}
