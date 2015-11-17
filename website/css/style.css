@@ -1,5 +1,13 @@
+body {
+    font-family: verdana;
+    background-color:#ECECEC;
+}
+
+.left { float:left; }
+.right { float:right; }
+
 .content {
-    width:55%;
+    width:65%;
 }
 
 ul.experience {
@@ -20,13 +28,10 @@ li.exp-item {
     margin:10px;
 }
 
-.left { float:left; }
-.right { float:right; }
-
 .description {
-    display:block;
-    width:80%;
+    overflow:auto;
     height:150px;
+    padding:10px;
 }
 
 .jobtitle {
@@ -37,13 +42,15 @@ li.exp-item {
     float:right;
 }
 
-.icon img {
-    margin:0;
-    height:150px;
-    width:150px;
+.icon {
+    display:table-cell;
+    vertical-align:middle;
+    margin:5px;
 }
 
-body {
-    font-family: verdana;
-    background-color:#ECECEC;
+.icon img {
+    height:150px;
+    width:150px;
+    display:block;
+    margin:auto auto;
 }
