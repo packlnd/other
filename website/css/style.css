@@ -1,4 +1,9 @@
+.content {
+    width:55%;
+}
+
 ul.experience {
+    clear:both;
     height: auto;
     list-style-type:none;
 }
@@ -10,27 +15,22 @@ ul.tasks {
 }
 
 li.exp-item {
-    width:45%;
     text-align:left;
     overflow:hidden;
-    padding-top:auto;
-    padding-bottom:auto;
+    margin:10px;
 }
 
-.icon {
-    float:left;
-}
+.left { float:left; }
+.right { float:right; }
 
 .description {
     display:block;
-    width:75%;
+    width:80%;
     height:150px;
-    float:right;
 }
 
 .jobtitle {
     float:left;
-    margin-right:35px;
 }
 
 .date {
@@ -38,10 +38,12 @@ li.exp-item {
 }
 
 .icon img {
+    margin:0;
     height:150px;
     width:150px;
 }
 
 body {
+    font-family: verdana;
     background-color:#ECECEC;
 }
