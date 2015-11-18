@@ -7,7 +7,7 @@ body {
 .right { float:right; }
 
 .content {
-    width:65%;
+    width:55%;
 }
 
 ul.experience {
@@ -25,7 +25,7 @@ ul.tasks {
 li.exp-item {
     text-align:left;
     overflow:hidden;
-    margin:10px;
+    margin:5px;
 }
 
 .description {
@@ -36,10 +36,13 @@ li.exp-item {
 
 .jobtitle {
     float:left;
+    margin-top:5px;
 }
 
 .date {
     float:right;
+    margin-top:5px;
+    text-align:right;
 }
 
 .icon {
@@ -53,4 +56,5 @@ li.exp-item {
     width:150px;
     display:block;
     margin:auto auto;
+    border-radius:10px;
 }
