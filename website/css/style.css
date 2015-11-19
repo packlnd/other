@@ -1,6 +1,7 @@
 body {
-    font-family: verdana;
-    background-color:#ECECEC;
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+    background-color:#79C879;
+    color:#FFF;
 }
 
 .left { float:left; }
@@ -36,12 +37,12 @@ li.exp-item {
 
 .jobtitle {
     float:left;
-    margin-top:5px;
+    margin:5px 0 5px 0;
 }
 
 .date {
     float:right;
-    margin-top:5px;
+    margin:5px 0 5px 0;
     text-align:right;
 }
 
