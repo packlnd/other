@@ -7,8 +7,18 @@ body {
 .left { float:left; }
 .right { float:right; }
 
+.main {
+    height:970px;
+}
+
+.nav {
+    background-color:#FF0;
+    height:50px;
+    margin:auto 0;
+}
+
 .content {
-    width:45%;
+    width:50%;
 }
 
 ul.experience {
