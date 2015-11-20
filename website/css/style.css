@@ -1,14 +1,14 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
-    background-color:#79C879;
-    color:#FFF;
+    background-color:#E5E5E5;
+    color:#323232;
 }
 
 .left { float:left; }
 .right { float:right; }
 
 .content {
-    width:55%;
+    width:45%;
 }
 
 ul.experience {
@@ -17,10 +17,10 @@ ul.experience {
     list-style-type:none;
 }
 
-ul.tasks {
-    list-style-type:none;
+p.tasks {
     clear:both;
     float:left;
+    margin:0px 0px 0px 10px;
 }
 
 li.exp-item {
@@ -31,7 +31,7 @@ li.exp-item {
 
 .description {
     overflow:auto;
-    height:150px;
+    height:130px;
     padding:10px;
 }
 
@@ -53,8 +53,9 @@ li.exp-item {
 }
 
 .icon img {
-    height:150px;
-    width:150px;
+    object-fit: cover;
+    height:130px;
+    width:130px;
     display:block;
     margin:auto auto;
     border-radius:10px;
