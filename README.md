@@ -1,3 +1,3 @@
 # other
 
-Data structures, algorithms, coding problems
+Data structures, resume, algorithms, coding problems
