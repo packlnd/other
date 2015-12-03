@@ -8,7 +8,7 @@ body {
 .right { float:right; }
 
 .main {
-    height:970px;
+    background-color:#0FF;
 }
 
 .nav {
