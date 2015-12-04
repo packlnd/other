@@ -17,36 +17,33 @@ body {
 
 .section {
     position: relative;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-
-    display: -webkit-box;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-box-orient: vertical;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .main {
-    background-color:#0FF;
 }
 
 .nav {
-    background-color:#FF0;
+    margin-top:10%;
     width:70%;
 }
 
+.nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    font-weight:bold;
+}
+
 .content {
+    width:58%;
 }
 
 ul.experience {
     clear:both;
-    width:58%;
     height: auto;
     list-style-type:none;
 }
