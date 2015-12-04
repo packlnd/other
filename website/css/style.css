@@ -46,6 +46,7 @@ body {
 
 ul.experience {
     clear:both;
+    width:58%;
     height: auto;
     list-style-type:none;
 }
