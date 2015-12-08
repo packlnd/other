@@ -38,6 +38,10 @@ body {
     font-weight:bold;
 }
 
+.nav ul li {
+    margin:20px;
+}
+
 .content {
 }
 
