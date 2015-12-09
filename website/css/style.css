@@ -49,67 +49,97 @@ body {
     opacity:0.4;
 }
 
-.content {
-}
-
 ul.experience {
     clear:both;
     height: auto;
     list-style-type:none;
 }
 
-p.tasks {
-    clear:both;
-    float:left;
-    margin:0px 0px 0px 10px;
+.project {
+    position:relative;
+    clear: both;
+    margin:10px;
+    width:60%;
+    height:120px;
+    background-color:#f00;
 }
 
-li.exp-item {
+.project-title {
+    position:absolute;
+    margin:0;
+    bottom:15px;
+    right:15px;
+}
+
+.list-item {
+    position:relative;
     text-align:left;
     overflow:hidden;
     margin:5px;
+    height: 150px;
 }
 
-.description {
-    overflow:auto;
-    height:130px;
-    padding:10px;
-}
-
-.jobtitle {
-    float:left;
-    margin:5px 0 5px 0;
-}
-
-.date {
-    font-size:13px;
-    float:right;
-    margin:5px 0 5px 0;
-    text-align:right;
-}
-
-.icon {
-    display:table-cell;
-    vertical-align:middle;
-    margin:5px;
-}
-
-.icon img {
+.list-item img {
+    position:absolute;
+    top:10px;
     object-fit: cover;
     height:130px;
     width:130px;
-    display:block;
-    margin:auto auto;
     border-radius:10px;
 }
 
-.projects {
-    background-color:#00f;
+.list-item.to-left img {
+    left:10px;
 }
 
-.project {
-    margin:10px;
-    width:200px;
-    height:50px;
-    background-color:#f00;
+.list-item.to-right img {
+    right:10px;
+}
+
+.list-item .jobtitle {
+    position:absolute;
+    margin:5px 0 0 0;
+    top:10px;
+}
+
+.list-item.to-left .jobtitle {
+    left: 150px;
+}
+
+.list-item.to-right .jobtitle {
+    left: 10px;
+}
+
+.list-item .date {
+    position:absolute;
+    margin:5px 0 0 0;
+    top:10px;
+    font-size:11px;
+    text-align:right;
+}
+
+.list-item.to-left .date {
+    right:10px;
+}
+
+.list-item.to-right .date {
+    right:150px;
+}
+
+.list-item .tasks {
+    position:absolute;
+    width:60%;
+    top:30px;
+}
+
+.list-item.to-left .tasks {
+    left:155px;
+}
+
+.list-item.to-right .tasks {
+    left:15px;
+}
+
+a#mainlink {
+    margin-top:23px;
 }
