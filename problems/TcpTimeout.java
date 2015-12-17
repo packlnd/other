@@ -2,8 +2,8 @@ public class TcpTimeout {
     public static void main(String[] args) {
         double estimatedrtt = 4.0;
         double samplertt = 1.0;
-        double deviation = 0.5;
-        double timeout=100;
+        double deviation = 2.0;
+        double timeout=5;
         double del = 1.0/8.0;
         int count =0;
         while (timeout > 4) {
