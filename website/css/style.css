@@ -20,7 +20,7 @@ body {
     top: 0;
     left: 0;
     width:50%;
-    height: 100%;
+    min-height: 100%;
 }
 
 .main {
@@ -141,5 +141,7 @@ ul.experience {
 }
 
 a#mainlink {
+    text-decoration:none;
     margin-top:23px;
+    color:#323232;
 }
