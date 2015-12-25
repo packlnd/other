@@ -2,6 +2,8 @@
 #include<string.h>
 #include<assert.h>
 
+// Check if two strings are anagrams.
+
 int anagram(char *a, char *b) {
     int lena = strlen(a), lenb = strlen(b);
     if (lena != lenb) return 0;
