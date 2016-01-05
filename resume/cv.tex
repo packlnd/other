@@ -1,4 +1,4 @@
-\documentclass[10.5pt]{article}
+\documentclass[10pt]{article}
 \usepackage[margin=2.5em]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
@@ -6,10 +6,6 @@
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
 \linespread{0.8}
-
-\newenvironment{sect}[1][]
-{ \section*{\textsc{#1}} \noindent \begin{tabular}{p{5.3em} p{48em}} }
-{ \end{tabular} }
 
 \titleformat{\section}
   {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
@@ -27,82 +23,93 @@
     packland@cs.uw.edu&(206) 890-8507
   \end{tabular} \\
   \vspace{0.3em}
-  \textbf{Graduating in June 2017. Looking for a summer internship.\\I have a J1 visa sponsored by the University of Washington which allows me to work in the US for nine months}
+  \textbf{Graduating in June 2017.}
 \end{center}
 
-\begin{sect}[Education]
-  2015--(2016)&\textbf{Departmental exchange, Computer Science, \textit{University of Washington\hfill Seattle, USA}}\\
-  &-- Highly competitive selection process. Only one student from my university admitted every year.\\
-  &-- Selection based on GPA.\\ \\
+\section*{Education}
+\vspace{0.1em}
+\hline
+\vspace{0.3em}
+\noindent\textbf{University of Washington, Seattle, WA}\hfill\textit{2015--2016}\\
+\indent-- \textbf{Exchange}, Computer Science, GPA: 3.8/4.0\\
+\indent-- Highly competitive selection process. Only one student from my university admitted every year.\\
 
-  2012--(2017)&\textbf{Combined BS/MS, Computer Science, \textit{KTH Royal Institute of Technology\hfill Stockholm, Sweden}}\\
-  &-- Courses in algorithms, complexity, programming paradigms and compiler construction. \\
-  &-- GPA: 4.8/5.0.
-\end{sect}
+\noindent\textbf{KTH Royal Institute of Technology, Stockholm, Sweden}\hfill\textit{2012--2017}\\
+\indent-- \textbf{BS/MS}, Computer Science, GPA: 4.8/5.0\\
 
-\begin{sect}[Experience]
-  2015--2015&\textbf{Software Engineering Intern, \textit{Scania R\&D\hfill Södertälje, Sweden}}\\
-  &-- Continued developing project from the previous year.\\
-  &-- Implemented requests from teams within the company.\\
-  &-- Added several new features including digital envelope cryptography using open-ssl.\\
-  &Skills: C, C++, Cryptography, MATLAB. \\ \\
-  2013--2015&\textbf{Teaching Assistant, \textit{KTH Royal Institute of Technology\hfill Stockholm, Sweden}}\\
-  &-- Teaching programming and algorithms to 15 computer-science students.\\
-  &-- Grading weekly assignments and supervising month-long project at the end of the course. \\
-  &Skills: Java, Go, Theoretical computer science. \\ \\
+\section*{Experience}
+\vspace{0.1em}
+\hline
+\vspace{0.3em}
+\noindent\textbf{Yelp, San Francisco, CA}, Software Engineering Intern\hfill\textit{Summer 2016}\\
+\indent-- \\
+\indent Skills:--\\
 
-  2014--2014&\textbf{Software Engineering Intern, \textit{Scania R\&D\hfill Södertälje, Sweden}}\\
-  &-- Developed software for logging road and vehicle data in trucks.\\
-  &-- The software replaced commercial software saving thousands of dollars.\\
-  &-- Automated build process and optimized code for existing project. \\
-  &Skills: C, C\#, Agile development. \\
-\end{sect}
+\noindent\textbf{Scania, Södertälje, Sweden}, Software Engineering Intern\hfill\textit{Summer 2015}\\
+\indent-- Continued developing project from the previous year.\\
+\indent-- Implemented requests from teams within the company.\\
+\indent-- Added several new features including digital envelope cryptography using open-ssl.\\
+\indent Skills: C, C++, Cryptography, MATLAB. \\
 
-\begin{sect}[Projects]
-  2015&\textbf{Compiler in Scala, project course\hfill \textit{Scala}} \\
-  &-- Compiles a subset of Scala to JVM bytecode.\\
-  &-- Handwritten lexer, parser, name analyzer and type checker.\\
-  &-- Supports Java-like generics through type erasure.\\
-  &-- Received an A, the highest grade.\\ \\
+\noindent\textbf{KTH Royal Institute of Technology, Stockholm, Sweden}, Teaching Assistant\hfill\textit{2013--2015}\\
+\indent-- Teaching programming and algorithms to 15 computer-science students.\\
+\indent-- Grading weekly assignments and supervising month-long project at the end of the course. \\
+\indent Skills: Java, Go, Theoretical computer science. \\
 
-  2015--&\textbf{Chromium, open source web browser\hfill \textit{C++}} \\
-  &-- Currently working on good-first-bugs. \\
-  &-- Looking to work on more complex issues as I get more experience.\\ \\
+\noindent\textbf{Scania, Södertälje, Sweden}, Software Engineering Intern\hfill\textit{Summer 2014}\\
+\indent-- Developed software for logging road and vehicle data in trucks.\\
+\indent-- The software replaced commercial software saving thousands of dollars.\\
+\indent Skills: C, C\#, Agile development.\\
 
-  2015&\textbf{Picture-of-pictures, personal project\hfill \textit{Ruby, JavaScript}} \\
-  &-- Replaces each pixel in an image with an image whose dominant color is closest to the color of the pixel.\\
-  &-- Choosing better data structures reduced running time by 90\%. \\ \\
+\section*{Projects\hfill{More projects at \url{http://www.csc.kth.se/~packland}}}
+\vspace{0.1em}
+\hline
+\vspace{0.3em}
+\noindent\textbf{Compiler in Scala}, project course\hfill\textit{Scala}\\
+\indent-- Compiles a subset of Scala to JVM bytecode.\\
+\indent-- Handwritten lexer, parser, name analyzer and type checker.\\
+\indent-- Supports Java-like generics through type erasure.\\
+\indent-- Received an A, the highest grade.\\
 
-  2015&\textbf{Distributed data mining, research project\hfill \textit{C++}} \\
-  &-- Resulted in bachelor thesis.\\
-  &-- Investigated how a specific graph mining algorithm performed on different graph models.\\
-  &-- The thesis received an A, the highest grade. \\ \\
-  &More projects can be found at \url{http://www.csc.kth.se/~packland} \\
-\end{sect}
+\noindent\textbf{Chromium}, open source web browser\hfill \textit{C++} \\
+\indent-- Currently working on good-first-bugs. \\
+\indent-- Looking to work on more complex issues as I get more experience.\\
 
-\begin{sect}[Programming]
-  Main:&\textbf{Java (6 years)}, \textbf{Android (2 years)}, \textbf{C++ (2 years)} \\
-  Other:&C\#, JavaScript, Scala, Ruby, Go
-\end{sect}
-\vspace{1em}
-\begin{sect}[Leadership experience]
-  2014--2014&\textbf{Head of Sponsor, International Reception\hfill \textit{KTH Student Union}} \\
-  &-- Spent six months together with 13 other students planning the international reception.\\
-  &-- Welcomed over 2000 students during four arrival days and planned a month of activities. \\ \\
+\noindent\textbf{Picture-of-pictures}, personal project\hfill \textit{Ruby, JavaScript} \\
+\indent-- Replaces each pixel in an image with an image whose dominant color is closest to the color of the pixel.\\
+\indent-- Choosing better data structures reduced running time by 90\%. \\
 
-  2013--2014&\textbf{President of the Education Committee\hfill \textit{KTH, Computer Science Chapter}} \\
-  &-- Nominated by my predecessor because of my involvement the previous year.\\
-  &-- Meetings with students and faculty to discuss courses and the computer science department.
-\end{sect}
+\section*{Programming}
+\vspace{0.1em}
+\hline
+\vspace{0.3em}
+\indent Main: \textbf{Java (6 years)}, \textbf{Android (2 years)}, \textbf{C++ (2 years)}\\
+\indent Other: C\#, JavaScript, Scala, Ruby, Go\\
 
-\begin{sect}[Awards]
-  2015&\textbf{Henrik Göransson Sandviken Scholarship} \\
-  &-- Awarded scholarship for academic achievements at KTH Royal Institute of Technology.\\
-  &-- Selection based on GPA. Awarded to 90 students in total from all majors at the university.
-\end{sect}
+\section*{Leadership Experience}
+\vspace{0.1em}
+\hline
+\vspace{0.3em}
+\noindent\textbf{Head of Sponsor, International Reception, KTH}\hfill\textit{2014--2014} \\
+\indent-- Spent six months together with 13 other students planning the international reception.\\
+\indent-- Welcomed over 2000 students during four arrival days and planned a month of activities. \\
 
-\begin{sect}[Other]
-  Clubs:&UW photography club, education committee, business-relations group, international reception. \\
-  Interests:&photography, guitar.
-\end{sect}
+\noindent\textbf{President of the Education Committee, KTH}\hfill\textit{2013--2014} \\
+\indent-- Nominated by my predecessor because of my involvement the previous year.\\
+\indent-- Meetings with students and faculty to discuss courses and the computer science department.\\
+
+\section*{Awards}
+\vspace{0.1em}
+\hline
+\vspace{0.3em}
+\textbf{Henrik Göransson Sandviken Scholarship}\hfill\textit{2015}\\
+\indent-- Awarded scholarship for academic achievements at KTH Royal Institute of Technology.\\
+\indent-- Selection based on GPA. Awarded to 90 students in total from all majors at the university.\\
+
+\section*{Other}
+\vspace{0.1em}
+\hline
+\vspace{0.3em}
+\indent Clubs: UW photography club, education committee, business-relations group, international reception. \\
+\indent Interests: photography, guitar.
 \end{document}
