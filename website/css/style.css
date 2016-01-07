@@ -23,6 +23,10 @@ body {
     min-height: 100%;
 }
 
+ul.social li {
+    display:inline;
+}
+
 .main {
 }
 
@@ -47,6 +51,18 @@ body {
     text-decoration:none;
     font-size:22px;
     opacity:0.45;
+}
+
+.nav ul li a:hover {
+    color:red;
+}
+
+.nav ul li a:active {
+    color:black;
+}
+
+ul.social li {
+    margin:4px;
 }
 
 ul.experience {
