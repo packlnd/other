@@ -1,5 +1,5 @@
 import java.util.Stack;
-
+// .
 class Balance {
     public static void main(String[] args) {
         assert brackets("<()>");
