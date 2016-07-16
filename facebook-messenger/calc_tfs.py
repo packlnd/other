@@ -3,6 +3,8 @@
 from bs4 import BeautifulSoup as BS
 import csv
 
+#TODO: Pickle.
+
 with open('messages.htm', 'r') as f:
     content = f.read()
 print 'read raw file..'
