@@ -8,6 +8,10 @@ import os.path
 
 PICKLE_FILE='messages.pickle'
 
+N_GRAM='0'
+TF_IDF='1'
+
+
 if os.path.isfile(PICKLE_FILE):
     with open(PICKLE_FILE) as f:
         all_messages = pickle.load(f)
