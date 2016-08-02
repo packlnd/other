@@ -6,3 +6,4 @@ tfs = {}
 
 
 for f in os.listdir(TF_DIR):
+    #read file
