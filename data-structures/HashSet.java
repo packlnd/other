@@ -22,21 +22,19 @@ public class HashSet<T> {
     nodes = new ArrayList<Node>(capacity);
   }
 
+  private int index(T element) {
+    return Math.abs((element.hashCode()) % capacity);
+  }
+
   public void add(T element) {
-    if (shouldDoubleCapacity()) {
+    if (shouldDoubleCapacity())
       doubleCapacity();
-    }
     // TODO
   }
 
   public boolean contains(T element) {
     // TODO
     return false;
-  }
-
-  private int calculateIndex(T element) {
-    // TODO
-    return 0;
   }
 
   private void doubleCapacity() {
